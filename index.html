@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimTaeHyun</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <script src="https://kit.fontawesome.com/03ededf5ff.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.6.4/dist/index.umd.js"></script>
+</head>
+<body>
+    <canvas id="starfield" width="3000" height="2000"></canvas>
+    <img class="fixed-barcode" src="./assets/barcode.png" alt="Kim Tae Hyun Barcode">
+    <nav class="top-nav">
+        <div class="left-flex">
+            <h1>KimTaeHyun</h1>
+        </div>
+        <div class="right-flex">
+            <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+        </div>
+    </nav>
+    <div class="greeting-container">
+        <div class="texts-box">
+            <p id="type"></p>
+        </div>
+            <i class="fa-solid fa-angles-right"></i>
+    </div>
+    <div class="profile-container">
+        <h1>여기는 profile</h1>
+    </div>
+    <footer class="footer">
+        <p class>© 2022-present KimTaeHyun. All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="http://github.com/tjdrkr2580" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <a href="http://instargram.com/only04_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://velog.io/@tjdrkr2580" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-v"></i></a>
+        </div>
+    </footer>
+    <script src="./js/animation.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        new TypeIt("#type", {
+            speed: 40,
+            strings: ["모두가 놀랄만한 웹사이트를 만들 것 입니다.",
+            "모두가 사용하고 싶어하는 웹사이트를 만들 것 입니다.",
+            "모두가 프론드엔드 개발자 김태현을 알 수 있게 만들고 싶습니다.","<br>",
+            "저는 늘 성장을 갈망하는 고등학생, 김태현입니다."]
+          }).go();
+    </script>
+</body>
+</html>

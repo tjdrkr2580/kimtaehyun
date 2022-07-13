@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Poor+Story&display=swap");
 * {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -28,6 +30,19 @@ body {
   display: none;
 }
 
+.cursor {
+  filter: blur(1px);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
 a {
   color: white;
 }
@@ -54,7 +69,6 @@ a {
 .top-nav i {
   transition: transform 0.5s;
   font-size: 1.4rem;
-  cursor: pointer;
   color: white;
 }
 .top-nav i:active {
@@ -64,7 +78,6 @@ a {
   transform: rotate(180deg);
 }
 .top-nav .left-flex h1 {
-  cursor: pointer;
   color: white;
   font-family: "Edu VIC WA NT Beginner", cursive;
   font-weight: 100;
@@ -102,7 +115,6 @@ a {
 }
 .footer .footer-icons i {
   font-size: 1.4rem;
-  cursor: pointer;
   transition: color 0.4s;
 }
 .footer .footer-icons i:hover {
@@ -120,6 +132,7 @@ a {
 }
 
 .greeting-container {
+  display: none;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -140,6 +153,60 @@ a {
 }
 
 .profile-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: space-around;
   width: 100vw;
   height: 100vh;
+  width: 75%;
+  height: 70%;
+}
+.profile-container .profile-box h1 {
+  position: relative;
+  font-weight: 500;
+  font-size: 3rem;
+  color: white;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  transition: 0.3s;
+}
+.profile-container .profile-box h1:hover {
+  letter-spacing: 0.2rem;
+}
+.profile-container .profile-box h1::after {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  left: 0.4rem;
+  top: 0.1rem;
+  position: absolute;
+  content: "Kim Tae Hyun";
+  color: transparent;
+  -webkit-text-stroke: 0.01rem white;
+}
+.profile-container .profile-box h1::after:hover {
+  letter-spacing: 0.2rem;
+}
+.profile-container .profile-box .profile-picture {
+  width: 20rem;
+  height: 26rem;
+  border-radius: 50%;
+}
+.profile-container .text-box h1 {
+  font-size: 2rem;
+  color: white;
+  font-family: "Gowun Batang", serif;
+}
+.profile-container .text-box .text-box-sec1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.profile-container .text-box p {
+  font-family: "Gowun Batang", serif;
+  color: white;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

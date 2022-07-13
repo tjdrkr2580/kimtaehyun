@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Poor+Story&display=swap');
 
 $font-Edu : 'Edu VIC WA NT Beginner', cursive;
 $font-Gothic: 'Gothic A1', sans-serif;
+$font-Gowun: 'Gowun Batang', serif;
+$font-Poor: 'Poor Story', cursive;
+$font-Hahmlet: 'Hahmlet', serif;
+
 
 * {
     user-select: none;
@@ -30,6 +36,19 @@ $font-Gothic: 'Gothic A1', sans-serif;
   
   .hidden {
     display: none;
+  }
+
+  .cursor {
+    filter: blur(1px);
+    color: white;
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid white;
+    border-radius: 50%; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    transform: translate(-50%,-50%);
   }
 
 
@@ -62,7 +81,6 @@ $font-Gothic: 'Gothic A1', sans-serif;
     i {
         transition: transform 0.5s;
         font-size: 1.4rem;
-        cursor: pointer;
         color: white;
 
         &:active {
@@ -76,7 +94,6 @@ $font-Gothic: 'Gothic A1', sans-serif;
 
     .left-flex {
         h1 {
-        cursor: pointer;
         color: white;
         font-family: $font-Edu;
         font-weight: 100;
@@ -116,7 +133,6 @@ $font-Gothic: 'Gothic A1', sans-serif;
         
         i {
             font-size: 1.4rem;
-            cursor: pointer;
             transition: color 0.4s;
             &:hover {
                 color: #666;
@@ -138,6 +154,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
 
 
   .greeting-container {
+    display: none;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -159,6 +176,64 @@ $font-Gothic: 'Gothic A1', sans-serif;
 
 
 .profile-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: space-around;
     width: 100vw;
     height: 100vh;
+    width: 75%;
+    height: 70%;
+    .profile-box {
+        h1 {
+            position: relative;
+            font-weight: 500;
+            font-size: 3rem;
+            color: white;
+            font-family: $font-Edu;
+            transition: 0.3s;
+            &:hover {
+                letter-spacing: 0.2rem;
+            }
+            &::after {
+                font-family: $font-Edu;
+                left: 0.4rem;
+                top: 0.1rem;
+                position: absolute;
+                content: 'Kim Tae Hyun';
+                color: transparent;
+                -webkit-text-stroke: 0.01rem white;
+                &:hover {
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
+        .profile-picture {
+            width: 20rem;
+            height: 26rem;
+            border-radius: 50%;            
+        }
+    }
+    .text-box {
+        h1 {
+           font-size: 2rem;
+           color: white; 
+           font-family: $font-Gowun;
+        }
+        .text-box-sec1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        p {
+            font-family: $font-Gowun;
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
 }

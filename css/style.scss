@@ -11,6 +11,7 @@ $font-Hahmlet: 'Hahmlet', serif;
 
 
 * {
+    cursor: none;
     user-select: none;
     font-size: 14px;
     margin: 0;
@@ -180,19 +181,19 @@ $font-Hahmlet: 'Hahmlet', serif;
     display: flex;
     flex-direction: row;
     top: 50%;
-    left: 50%;
+    left: 46%;
     transform: translate(-50%,-50%);
     align-items: center;
     justify-content: space-around;
     width: 100vw;
     height: 100vh;
-    width: 75%;
+    width: 80%;
     height: 70%;
     .profile-box {
         h1 {
             position: relative;
             font-weight: 500;
-            font-size: 3rem;
+            font-size: 3.rem;
             color: white;
             font-family: $font-Edu;
             transition: 0.3s;
@@ -219,21 +220,29 @@ $font-Hahmlet: 'Hahmlet', serif;
         }
     }
     .text-box {
+
         h1 {
            font-size: 2rem;
            color: white; 
            font-family: $font-Gowun;
         }
         .text-box-sec1 {
+            margin-top: 2rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 2rem;
+            gap: 2.5rem;
         }
         p {
             font-family: $font-Gowun;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
+        }
+        .text-box-sec {
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
         }
     }
 }

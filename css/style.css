@@ -24,6 +24,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 a {
   color: white;
 }
@@ -92,6 +96,7 @@ a {
 }
 .footer .footer-icons {
   display: flex;
+  align-items: center;
   color: white;
   gap: 1rem;
 }
@@ -103,8 +108,19 @@ a {
 .footer .footer-icons i:hover {
   color: #666;
 }
+.footer .footer-icons .notionIcon {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.4s;
+}
+.footer .footer-icons .notionIcon:hover {
+  color: #666;
+}
 
 .greeting-container {
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
@@ -122,48 +138,8 @@ a {
   color: white;
   font-family: "Gothic A1", sans-serif;
 }
-.greeting-container .fa-angles-right {
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  right: 5%;
-  font-size: 3rem;
-  -webkit-animation: rightArrowAnimation 1.2s ease-in-out infinite;
-          animation: rightArrowAnimation 1.2s ease-in-out infinite;
-}
-.greeting-container .fa-angles-right p {
-  font-size: 1rem;
-  font-weight: 100;
-  font-family: "Gothic A1", sans-serif;
-}
 
 .profile-container {
   width: 100vw;
   height: 100vh;
-}
-
-@-webkit-keyframes rightArrowAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes rightArrowAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }/*# sourceMappingURL=style.css.map */

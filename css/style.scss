@@ -12,6 +12,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
     box-sizing: border-box;
   }
   
+
   canvas {
     height: auto;
     background: radial-gradient(ellipse at bottom, #0c1116 0%, #161927 100%);
@@ -21,13 +22,21 @@ $font-Gothic: 'Gothic A1', sans-serif;
     z-index: -1;
   }
   
+
   body {
     overflow: hidden;
   }
 
+  
+  .hidden {
+    display: none;
+  }
+
+
   a {
     color: white;
   }
+
 
   .fixed-barcode {
     right: 0%;
@@ -36,6 +45,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
     position: fixed;
     transform: rotate(-90deg);
   }
+
 
   .top-nav {
     transform: translateX(-50%);
@@ -47,6 +57,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
     i {
         transition: transform 0.5s;
@@ -61,6 +72,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
             transform: rotate(180deg);
         }
     }
+
 
     .left-flex {
         h1 {
@@ -80,6 +92,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
     }
 }
 
+
 .footer {
     width: 100%;
     display: flex;
@@ -97,6 +110,7 @@ $font-Gothic: 'Gothic A1', sans-serif;
     }
     .footer-icons {
         display: flex;
+        align-items: center;
         color: white;
         gap: 1rem;
         
@@ -108,10 +122,23 @@ $font-Gothic: 'Gothic A1', sans-serif;
                 color: #666;
             }
         }
+
+        .notionIcon {
+            font-family: $font-Edu;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.6rem;
+            transition: color 0.4s;
+            &:hover {
+                color: #666;
+            }
+        }
     }
 }
 
+
   .greeting-container {
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     .texts-box {
@@ -128,40 +155,10 @@ $font-Gothic: 'Gothic A1', sans-serif;
             font-family: $font-Gothic;
         }
   }
-
-  .fa-angles-right {
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    right: 5%;
-    font-size: 3rem;
-    animation: rightArrowAnimation 1.2s ease-in-out infinite;
-
-    p {
-        font-size: 1rem;
-        font-weight: 100;
-        font-family: $font-Gothic;
-    }
-}
 }
 
 
 .profile-container {
     width: 100vw;
     height: 100vh;
-}
-
-
-@keyframes rightArrowAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(15px);
-    }
-    100% {
-        transform: translateX(0);
-    }
 }

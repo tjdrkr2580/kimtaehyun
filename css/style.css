@@ -132,6 +132,7 @@ a {
 }
 
 .greeting-container {
+  display: none;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -153,7 +154,7 @@ a {
 
 .profile-container {
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: row;
   top: 50%;
   left: 46%;

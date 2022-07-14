@@ -30,6 +30,7 @@ $font-Hahmlet: 'Hahmlet', serif;
   
 
   body {
+    cursor: none;
     overflow: hidden;
   }
 
@@ -177,7 +178,7 @@ $font-Hahmlet: 'Hahmlet', serif;
 
 .profile-container {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: row;
     top: 50%;
     left: 46%;
@@ -192,7 +193,7 @@ $font-Hahmlet: 'Hahmlet', serif;
         h1 {
             position: relative;
             font-weight: 500;
-            font-size: 3.rem;
+            font-size: 3rem;
             color: white;
             font-family: $font-Edu;
             transition: 0.3s;

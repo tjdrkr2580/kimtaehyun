@@ -28,4 +28,3 @@ function toggleFullScreen() {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
-  

@@ -23,6 +23,7 @@ canvas {
 }
 
 body {
+  cursor: none;
   overflow: hidden;
 }
 
@@ -154,7 +155,7 @@ a {
 
 .profile-container {
   position: absolute;
-  display: flex;
+  display: none;
   flex-direction: row;
   top: 50%;
   left: 46%;
@@ -169,7 +170,7 @@ a {
 .profile-container .profile-box h1 {
   position: relative;
   font-weight: 500;
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: white;
   font-family: "Edu VIC WA NT Beginner", cursive;
   transition: 0.3s;

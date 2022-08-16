@@ -1,0 +1,28 @@
+.loading-wrapper {
+  width: 100vw;
+  height: 100vw;
+  background-color: black;
+
+  .loading-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    .logo {
+      width: 200px;
+      height: 200px;
+      animation: 1s ease-in animation;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

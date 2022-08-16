@@ -1,0 +1,38 @@
+.loading-wrapper {
+  width: 100vw;
+  height: 100vw;
+  background-color: black;
+}
+.loading-wrapper .loading-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+}
+.loading-wrapper .loading-box .logo {
+  width: 200px;
+  height: 200px;
+  -webkit-animation: 1s ease-in animation;
+          animation: 1s ease-in animation;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=loading.css.map */

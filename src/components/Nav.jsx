@@ -5,11 +5,9 @@ import { IoIosSearch } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import { FcDocument } from "react-icons/fc";
 import { BsFillTerminalFill } from "react-icons/bs";
-import { FaRegUser } from "react-icons/fa";
 import { FiPower } from "react-icons/fi";
-import { RiComputerLine } from "react-icons/ri";
 import { BsArrow90DegLeft } from "react-icons/bs";
-import Logo from "../assets/97386129-removebg-preview.png";
+import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
 

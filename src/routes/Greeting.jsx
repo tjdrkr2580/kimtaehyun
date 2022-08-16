@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./style/greeting.css";
 import { FiPower } from "react-icons/fi";
-import Logo from "../assets/97386129-removebg-preview.png";
+import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import AnimatedRoutes from "./../components/AnimatedRoutes";
+import { Helmet } from "react-helmet";
 
 const Greeting = () => {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ const Greeting = () => {
 
   return (
     <AnimatedRoutes>
+      <Helmet title="TaeH | Greeting" />
       <section className="greeting-wrapper">
         <Link to="/home">
           <div className="home-shift"></div>

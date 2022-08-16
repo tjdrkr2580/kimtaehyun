@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Logo from "../assets/97386129-removebg-preview.png";
+import Logo from "../assets/logo.png";
 import "./style/loading.css";
 
 const Loading = () => {

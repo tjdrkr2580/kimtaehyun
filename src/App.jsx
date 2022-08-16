@@ -4,6 +4,7 @@ import "./app.css";
 import Greeting from "./routes/Greeting";
 import Loading from "./routes/Loading";
 import { AnimatePresence } from "framer-motion";
+import Error from "./routes/Error";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Loading />} />
           <Route path="/greeting" element={<Greeting />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>

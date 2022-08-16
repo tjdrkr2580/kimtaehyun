@@ -1,4 +1,9 @@
 .nav-wrapper {
+  border: 1px solid;
+  border-image-slice: 1;
+  background: transparent;
+  border-image-source: linear-gradient(to top, #010234 0%, #330867 90%);
+  margin: 0 auto;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
@@ -6,29 +11,66 @@
   display: flex;
   align-items: center;
   height: 70px;
-  width: 30vw;
+  width: auto;
   gap: 1rem;
 
   .nav-line {
+    position: relative;
     gap: 1.2rem;
     display: flex;
     align-items: center;
     height: 100%;
     width: auto;
-    border-right: 1px solid black;
     padding-right: 1rem;
     li {
       border-radius: 50%;
       transition: 0.4s background;
       cursor: pointer;
       &:hover {
-        background: rgba(#000, $alpha: 0.6);
+        animation: hoverAnimation 1s ease-in-out infinite;
       }
+    }
+    &::after {
+      position: absolute;
+      right: 2%;
+      content: "";
+      height: 45px;
+      width: 1px;
+      background-color: white;
     }
   }
 
+  .nav-line-none {
+    position: relative;
+    gap: 1.2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    padding-right: 1rem;
+    li {
+      border-radius: 50%;
+      transition: 0.4s background;
+      cursor: pointer;
+      &:hover {
+        animation: hoverAnimation;
+      }
+    }
+  }
   img {
     width: 70px;
     height: 60px;
+  }
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

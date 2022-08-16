@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style/greeting.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import { FiPower } from "react-icons/fi";
 import Logo from "../assets/97386129-removebg-preview.png";
 import { Link } from "react-router-dom";
 import AnimatedRoutes from "./../components/AnimatedRoutes";
@@ -50,10 +49,12 @@ const Greeting = () => {
         <div className="greeting-btns-layout">
           <ul className="greeting-btns">
             <li>
-              <img src={Logo} alt="logo" />
+              <a href="https://github.com/tjdrkr2580/kimtaehyun">
+                <img src={Logo} alt="logo" />
+              </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faPowerOff} size="2x" />
+              <FiPower size={36} />
             </li>
           </ul>
         </div>

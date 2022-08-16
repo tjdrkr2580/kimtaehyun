@@ -69,9 +69,21 @@
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-          transform: rotate(20deg);
+          animation: 1s ease-in-out hoverAnimation infinite;
         }
       }
     }
+  }
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

@@ -64,5 +64,30 @@
   height: 100px;
 }
 .greeting-wrapper .greeting-btns-layout .greeting-btns li:hover {
-  transform: rotate(20deg);
+  -webkit-animation: 1s ease-in-out hoverAnimation infinite;
+          animation: 1s ease-in-out hoverAnimation infinite;
+}
+
+@-webkit-keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=greeting.css.map */

@@ -8,14 +8,27 @@ import { BsFillTerminalFill } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { FiPower } from "react-icons/fi";
 import { RiComputerLine } from "react-icons/ri";
+import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/97386129-removebg-preview.png";
+import { Link } from "react-router-dom";
+import { RiFullscreenFill } from "react-icons/ri";
 
 const Nav = () => {
+  const pageOff = () => {
+    const answer = window.confirm(
+      '정말로 TaeH 를 닫으시려면 "확인"을 클릭해주세요.'
+    );
+    if (answer) {
+      window.close();
+    }
+  };
   return (
     <nav className="nav-wrapper">
       <ul className="nav-line">
         <li>
-          <img src={Logo} alt="logo" />
+          <a href="https://github.com/tjdrkr2580/kimtaehyun" target="_blink">
+            <img src={Logo} alt="logo" />
+          </a>
         </li>
       </ul>
       <ul className="nav-line">
@@ -30,8 +43,6 @@ const Nav = () => {
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
-      </ul>
-      <ul className="nav-line">
         <li>
           <FcDocument size={36} />
         </li>
@@ -39,16 +50,26 @@ const Nav = () => {
           <BsFillTerminalFill size={30} style={{ color: "white" }} />
         </li>
       </ul>
-      <ul className="nav-line">
-        <li>
-          <FaRegUser size={24} style={{ color: "white" }} />
-        </li>
-        <li>
-          <RiComputerLine size={24} style={{ color: "white" }} />
-        </li>
-      </ul>
       <ul className="nav-line-none">
         <li>
+          <Link to="/greeting">
+            <BsArrow90DegLeft size={24} style={{ color: "white" }} />
+          </Link>
+        </li>
+        <li
+          onClick={() => {
+            if (!document.fullscreenElement) {
+              document.documentElement.requestFullscreen();
+            } else {
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              }
+            }
+          }}
+        >
+          <RiFullscreenFill size={30} />
+        </li>
+        <li onClick={pageOff}>
           <FiPower size={24} style={{ color: "white" }} />
         </li>
       </ul>

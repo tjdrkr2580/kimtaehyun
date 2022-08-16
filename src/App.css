@@ -5,4 +5,8 @@
   font-size: 14px;
   list-style: none;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=app.css.map */

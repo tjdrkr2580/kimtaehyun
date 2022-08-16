@@ -1,0 +1,32 @@
+.nav-wrapper {
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 30vw;
+  gap: 1rem;
+}
+.nav-wrapper .nav-line {
+  gap: 1.2rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  border-right: 1px solid black;
+  padding-right: 1rem;
+}
+.nav-wrapper .nav-line li {
+  border-radius: 50%;
+  transition: 0.4s background;
+  cursor: pointer;
+}
+.nav-wrapper .nav-line li:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.nav-wrapper img {
+  width: 70px;
+  height: 60px;
+}/*# sourceMappingURL=nav.css.map */

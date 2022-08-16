@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap");
 .greeting-wrapper {
+  font-family: "Noto Sans KR", sans-serif;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,10 +9,24 @@
   height: 100vh;
   background: linear-gradient(45deg, #042461 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(135deg, #340447 10%, rgba(49, 5, 209, 0) 80%), linear-gradient(225deg, #0f053a 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #050813 100%, rgba(9, 245, 5, 0) 70%);
 }
+.greeting-wrapper .home-shift {
+  cursor: default;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+.greeting-wrapper .greeting-advice {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translateX(-50%);
+  font-weight: 100;
+  font-size: 1.6rem;
+}
 .greeting-wrapper .date {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   top: 10%;
   left: 50%;
   position: absolute;
@@ -18,6 +34,7 @@
   align-items: center;
 }
 .greeting-wrapper .date .greeting-date {
+  font-weight: 100;
   font-size: 2rem;
 }
 .greeting-wrapper .date .greeting-clock {
@@ -26,19 +43,25 @@
 .greeting-wrapper .greeting-btns-layout {
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw;
+  width: 100vw;
   position: absolute;
   bottom: 0%;
   margin-bottom: 4rem;
 }
 .greeting-wrapper .greeting-btns-layout .greeting-btns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
   gap: 5rem;
 }
 .greeting-wrapper .greeting-btns-layout .greeting-btns li {
+  z-index: 999;
   cursor: pointer;
   transition: 0.3s;
+}
+.greeting-wrapper .greeting-btns-layout .greeting-btns li img {
+  width: 100px;
+  height: 100px;
 }
 .greeting-wrapper .greeting-btns-layout .greeting-btns li:hover {
   transform: rotate(20deg);

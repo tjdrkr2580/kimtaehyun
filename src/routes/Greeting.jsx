@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./style/greeting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../assets/97386129-removebg-preview.png";
+import { Link } from "react-router-dom";
+import AnimatedRoutes from "./../components/AnimatedRoutes";
 
 const Greeting = () => {
   const [loading, setLoading] = useState(true);
@@ -24,7 +27,7 @@ const Greeting = () => {
     let time = h + ":" + m;
     document.querySelector(".greeting-clock").innerText = time;
     document.querySelector(".greeting-date").innerText = today;
-    setTimeout(clock, 60000);
+    setTimeout(clock, 1000);
   };
 
   if (loading === false) {
@@ -32,24 +35,31 @@ const Greeting = () => {
   }
 
   return (
-    <section className="greeting-wrapper">
-      <div className="date">
-        <h1 className="greeting-clock">00 : 00</h1>
-        <p className="greeting-date">dawdaw</p>
-      </div>
-      <div className="greeting-btns-layout">
-        <ul className="greeting-btns">
-          <li>
-            <FontAwesomeIcon icon={faPowerOff} size="2x" />
-          </li>
-        </ul>
-      </div>
-    </section>
+    <AnimatedRoutes>
+      <section className="greeting-wrapper">
+        <Link to="/home">
+          <div className="home-shift"></div>
+        </Link>
+        <div className="date">
+          <h1 className="greeting-clock">00 : 00</h1>
+          <p className="greeting-date">dawdaw</p>
+        </div>
+        <p className="greeting-advice">
+          아무 곳이나 클릭하실 경우 이동할 수 있습니다.
+        </p>
+        <div className="greeting-btns-layout">
+          <ul className="greeting-btns">
+            <li>
+              <img src={Logo} alt="logo" />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faPowerOff} size="2x" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </AnimatedRoutes>
   );
 };
 
 export default Greeting;
-
-// import Loading from "./../components/Loading";
-
-/* <>{loading ? <Loading /> : }</> */

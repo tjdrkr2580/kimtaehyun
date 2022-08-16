@@ -2,9 +2,9 @@ import React from "react";
 
 const Loadingbar = () => {
   return (
-    <div class="progress-bar">
-      <span class="bar">
-        <span class="progress"></span>
+    <div className="progress-bar">
+      <span className="bar">
+        <span className="progress"></span>
       </span>
     </div>
   );

@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Loading from "./../components/Loading";
+import React from "react";
+import "./style/home.css";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setInterval(() => {
-      setLoading(!loading);
-    }, 10000);
-  }, []);
-  return <>{loading ? <Loading /> : <div className="home"></div>};</>;
+  return <div></div>;
 };
 
 export default Home;

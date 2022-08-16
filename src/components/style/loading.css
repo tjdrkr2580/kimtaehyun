@@ -22,8 +22,8 @@
           animation-fill-mode: forwards;
 }
 .loading-wrapper .loading-box .loading-bar {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation: 0.5s opacity ease-in-out;
           animation: 0.5s opacity ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -36,12 +36,12 @@
 .loading-wrapper .loading-box .loading-bar .bar {
   -webkit-animation: bar-animation 5s ease-in-out;
           animation: bar-animation 5s ease-in-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   border-radius: 60px;
-  background-color: white;
+  background: linear-gradient(45deg, #042461 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(135deg, #340447 10%, rgba(49, 5, 209, 0) 80%), linear-gradient(225deg, #0f053a 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #050813 100%, rgba(9, 245, 5, 0) 70%);
   width: 0%;
   height: 100%;
 }

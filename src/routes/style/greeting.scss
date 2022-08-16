@@ -1,0 +1,51 @@
+.greeting-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #042461 0%, rgba(225, 5, 34, 0) 70%),
+    linear-gradient(135deg, #340447 10%, rgba(49, 5, 209, 0) 80%),
+    linear-gradient(225deg, #0f053a 10%, rgba(10, 219, 216, 0) 80%),
+    linear-gradient(315deg, #050813 100%, rgba(9, 245, 5, 0) 70%);
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    align-items: center;
+
+    .greeting-date {
+      font-size: 2rem;
+    }
+    .greeting-clock {
+      font-size: 6vw;
+    }
+  }
+
+  .greeting-btns-layout {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: 4rem;
+    .greeting-btns {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5rem;
+      li {
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          transform: rotate(20deg);
+        }
+      }
+    }
+  }
+}

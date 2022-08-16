@@ -9,17 +9,44 @@
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 .loading-wrapper .loading-box .logo {
   width: 200px;
   height: 200px;
-  -webkit-animation: 1s ease-in animation;
-          animation: 1s ease-in animation;
+  -webkit-animation: 1s ease-in opacity;
+          animation: 1s ease-in opacity;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+.loading-wrapper .loading-box .loading-bar {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation: 0.5s opacity ease-in-out;
+          animation: 0.5s opacity ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  border-radius: 60px;
+  height: 20px;
+  width: 400px;
+  border: 2px solid white;
+}
+.loading-wrapper .loading-box .loading-bar .bar {
+  -webkit-animation: bar-animation 5s ease-in-out;
+          animation: bar-animation 5s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  border-radius: 60px;
+  background-color: white;
+  width: 0%;
+  height: 100%;
+}
 
-@-webkit-keyframes animation {
+@-webkit-keyframes opacity {
   from {
     opacity: 0;
   }
@@ -28,11 +55,75 @@
   }
 }
 
-@keyframes animation {
+@keyframes opacity {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes bar-animation {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes bar-animation {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
   }
 }/*# sourceMappingURL=loading.css.map */

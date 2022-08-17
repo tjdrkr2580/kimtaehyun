@@ -61,9 +61,10 @@ const Nav = () => {
           <RiFullscreenFill size={30} />
         </li>
         <li>
-          <CCloseButton>
-            <FiPower size={24} style={{ color: "white" }} />
-          </CCloseButton>
+          <CCloseButton />
+        </li>
+        <li>
+          <FiPower size={24} style={{ color: "white" }} />
         </li>
       </ul>
     </nav>

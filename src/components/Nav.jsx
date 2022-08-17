@@ -10,7 +10,6 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
-import { CCloseButton } from "@coreui/react";
 
 const Nav = () => {
   return (
@@ -30,7 +29,10 @@ const Nav = () => {
           <IoIosSearch size={36} style={{ color: "white" }} />
         </li>
         <li>
-          <a href="https://google.com" target="_blink">
+          <a
+            href="https://www.google.co.kr/search?q=%EC%9D%B8%EC%B2%9C%EC%A0%84%EC%9E%90%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90"
+            target="_blink"
+          >
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
@@ -59,12 +61,6 @@ const Nav = () => {
           }}
         >
           <RiFullscreenFill size={30} />
-        </li>
-        <li>
-          <CCloseButton />
-        </li>
-        <li>
-          <FiPower size={24} style={{ color: "white" }} />
         </li>
       </ul>
     </nav>

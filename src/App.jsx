@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
-import "./app.css";
+import "./App.css";
 import Greeting from "./routes/Greeting";
 import Loading from "./routes/Loading";
 import { AnimatePresence } from "framer-motion";

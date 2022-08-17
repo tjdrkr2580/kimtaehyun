@@ -10,16 +10,9 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
+import { CCloseButton } from "@coreui/react";
 
 const Nav = () => {
-  const pageOff = () => {
-    const answer = window.confirm(
-      '정말로 TaeH 를 닫으시려면 "확인"을 클릭해주세요.'
-    );
-    if (answer) {
-      window.close();
-    }
-  };
   return (
     <nav className="nav-wrapper">
       <ul className="nav-line">
@@ -67,8 +60,10 @@ const Nav = () => {
         >
           <RiFullscreenFill size={30} />
         </li>
-        <li onClick={pageOff}>
-          <FiPower size={24} style={{ color: "white" }} />
+        <li>
+          <CCloseButton>
+            <FiPower size={24} style={{ color: "white" }} />
+          </CCloseButton>
         </li>
       </ul>
     </nav>

@@ -1,17 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/nav.css";
 import { FcFolder } from "react-icons/fc";
 import { IoIosSearch } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import { FcDocument } from "react-icons/fc";
 import { BsFillTerminalFill } from "react-icons/bs";
-import { FiPower } from "react-icons/fi";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
 
 const Nav = () => {
+  const [folder, setFo] = useState(false);
+  const [music, setMu] = useState(false);
+  const [document, setDo] = useState(false);
+  const [terminal, setTe] = useState(false);
+
+  const onClickF = () => {
+    setFo(!folder);
+    console.log("fo");
+  };
+  const onClickM = () => {
+    setMu(!music);
+    console.log("mu");
+  };
+  const onClickD = () => {
+    setDo(!document);
+    console.log("do");
+  };
+  const onClickT = () => {
+    setTe(!terminal);
+    console.log("te");
+  };
+
   return (
     <nav className="nav-wrapper">
       <ul className="nav-line">
@@ -22,10 +43,10 @@ const Nav = () => {
         </li>
       </ul>
       <ul className="nav-line">
-        <li>
+        <li onClick={onClickF}>
           <FcFolder size={36} />
         </li>
-        <li>
+        <li onClick={onClickM}>
           <IoIosSearch size={36} style={{ color: "white" }} />
         </li>
         <li>
@@ -36,10 +57,10 @@ const Nav = () => {
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
-        <li>
+        <li onClick={onClickD}>
           <FcDocument size={36} />
         </li>
-        <li style={{ borderRadius: "0%" }}>
+        <li onClick={onClickT}>
           <BsFillTerminalFill size={30} style={{ color: "white" }} />
         </li>
       </ul>

@@ -45,6 +45,7 @@
     height: 90%;
     width: auto;
     li {
+      z-index: 999;
       color: white;
       transition: 0.4s background;
       cursor: pointer;

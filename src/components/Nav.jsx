@@ -9,6 +9,10 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
+import Folder from "./Folder";
+import Music from "./Music";
+import Terminal from "./Terminal";
+import Document from "./Document";
 
 const Nav = () => {
   const [folder, setFo] = useState(false);
@@ -84,6 +88,10 @@ const Nav = () => {
           <RiFullscreenFill size={30} />
         </li>
       </ul>
+      <Folder />
+      <Music />
+      <Terminal />
+      <Document />
     </nav>
   );
 };

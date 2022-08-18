@@ -22,7 +22,6 @@ const Greeting = () => {
     let mm = String(date.getMonth() + 1).padStart(2, "0");
     let week = new Array("일", "월", "화", "수", "목", "금", "토");
     let day = new Date().getDay();
-    // eslint-disable-next-line no-useless-concat
     let today = mm + "월" + " " + dd + "일" + " " + week[day] + "요일";
     let time = h + ":" + m;
     document.querySelector(".greeting-clock").innerText = time;

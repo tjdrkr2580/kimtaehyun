@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style/nav.css";
 import { FcFolder } from "react-icons/fc";
 import { FcMusic } from "react-icons/fc";
@@ -10,16 +10,7 @@ import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
 
-const Nav = ({
-  gallery,
-  music,
-  document,
-  terminal,
-  setGa,
-  setMu,
-  setDo,
-  setTe,
-}) => {
+const Nav = ({ gallery, music, doc, terminal, setGa, setMu, setDo, setTe }) => {
   const onClick = (e) => {
     switch (e.target.id) {
       case "gal":
@@ -29,7 +20,7 @@ const Nav = ({
         setMu(!music);
         break;
       case "doc":
-        setDo(!document);
+        setDo(!doc);
         break;
       default:
         setTe(!terminal);

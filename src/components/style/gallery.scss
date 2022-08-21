@@ -1,17 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap");
+
 .gallery-wrapper {
   overflow: hidden;
   border-radius: 30px 30px 0 0;
   position: relative;
   width: 65vw;
   height: 55vh;
-  position: absolute;
-  top: 50%;
   left: 50%;
+  position: absolute;
   background-color: #252226;
   transform: translate(-50%, -50%);
+  animation: gallery 2s ease-in-out forwards;
 
   .gallery-line {
-    align-items: center;
     justify-content: flex-end;
     gap: 0.5rem;
     display: flex;
@@ -31,5 +32,37 @@
   }
   .gallery-images {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 3rem;
+    .gallery-image {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-family: "Noto Sans KR", sans-serif;
+      margin-top: 1rem;
+      align-items: center;
+      img {
+        width: 18vw;
+        height: 18vw;
+      }
+      p {
+        margin-top: 0.5rem;
+        color: white;
+        font-weight: 100;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@keyframes gallery {
+  from {
+    opacity: 0;
+    top: 60%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
   }
 }

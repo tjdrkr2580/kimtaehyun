@@ -11,7 +11,7 @@ import Document from "./../components/Document";
 const Home = () => {
   const [gallery, setGa] = useState(false);
   const [music, setMu] = useState(false);
-  const [document, setDo] = useState(false);
+  const [doc, setDo] = useState(false);
   const [terminal, setTe] = useState(false);
   return (
     <AnimatedRoutes>
@@ -20,7 +20,7 @@ const Home = () => {
         <Nav
           gallery={gallery}
           music={music}
-          document={document}
+          document={doc}
           terminal={terminal}
           setGa={setGa}
           setMu={setMu}
@@ -29,7 +29,7 @@ const Home = () => {
         />
         {gallery ? <Gallery /> : null}
         {music ? <Music /> : null}
-        {document ? <Document /> : null}
+        {doc ? <Document /> : null}
         {terminal ? <Terminal /> : null}
       </section>
     </AnimatedRoutes>

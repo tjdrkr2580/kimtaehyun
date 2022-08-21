@@ -15,11 +15,26 @@ const Gallery = () => {
         <li style={{ color: "#ec6a5f " }}>●</li>
       </ul>
       <section className="gallery-images">
-        <img src={Cstar} alt="img1" />
-        <img src={Star} alt="img2" />
-        <img src={Block} alt="img3" />
-        <img src={Bottle} alt="img4" />
-        <img src={Spin} alt="img5" />
+        <div className="gallery-image">
+          <img src={Cstar} alt="img1" />
+          <p>Canvas Cursor Stars</p>
+        </div>
+        <div className="gallery-image">
+          <img src={Star} alt="img2" />
+          <p>Stars</p>
+        </div>
+        <div className="gallery-image">
+          <img src={Block} alt="img3" />
+          <p>Hover Blocks</p>
+        </div>
+        <div className="gallery-image">
+          <img src={Bottle} alt="img4" />
+          <p>Bottle</p>
+        </div>
+        <div className="gallery-image">
+          <img src={Spin} alt="img5" />
+          <p>Spin Text</p>
+        </div>
       </section>
     </section>
   );

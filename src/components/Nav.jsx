@@ -9,25 +9,21 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
-import Folder from "./Folder";
-import Music from "./Music";
-import Terminal from "./Terminal";
-import Document from "./Document";
 
 const Nav = ({
-  folder,
+  gallery,
   music,
   document,
   terminal,
-  setFo,
+  setGa,
   setMu,
   setDo,
   setTe,
 }) => {
   const onClick = (e) => {
     switch (e.target.id) {
-      case "fol":
-        setFo(!folder);
+      case "gal":
+        setGa(!gallery);
         break;
       case "mus":
         setMu(!music);
@@ -51,7 +47,7 @@ const Nav = ({
         </li>
       </ul>
       <ul className="nav-line">
-        <li id="fol" onClick={onClick}>
+        <li id="gal" onClick={onClick}>
           <FcFolder size={36} />
         </li>
         <li id="mus" onClick={onClick}>
@@ -92,10 +88,6 @@ const Nav = ({
           <RiFullscreenFill size={30} />
         </li>
       </ul>
-      {folder ? <Folder /> : null}
-      {music ? <Music /> : null}
-      {document ? <Document /> : null}
-      {terminal ? <Terminal /> : null}
     </nav>
   );
 };

@@ -27,7 +27,7 @@ const Home = () => {
           setDo={setDo}
           setTe={setTe}
         />
-        {gallery ? <Gallery /> : null}
+        {gallery ? <Gallery setGa={setGa} gallery={gallery} /> : null}
         {music ? <Music /> : null}
         {doc ? <Document /> : null}
         {terminal ? <Terminal /> : null}

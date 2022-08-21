@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap");
 
 .gallery-wrapper {
-  overflow: hidden;
-  border-radius: 30px 30px 0 0;
+  z-index: 1000;
+  overflow-y: auto;
+  border-radius: 20px 20px 0 0;
   position: relative;
   width: 65vw;
   height: 55vh;
@@ -10,9 +11,14 @@
   position: absolute;
   background-color: #252226;
   transform: translate(-50%, -50%);
-  animation: gallery 2s ease-in-out forwards;
+  animation: gallery 1s ease-in-out forwards;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .gallery-line {
+    position: fixed;
     justify-content: flex-end;
     gap: 0.5rem;
     display: flex;
@@ -35,6 +41,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     gap: 3rem;
+    margin-top: 3rem;
     .gallery-image {
       cursor: pointer;
       display: flex;
@@ -50,7 +57,7 @@
         margin-top: 0.5rem;
         color: white;
         font-weight: 100;
-        font-size: 1.3rem;
+        font-size: 1.2vw;
       }
     }
   }

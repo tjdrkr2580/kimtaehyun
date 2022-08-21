@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
-import "./App.css";
+import "./app.css";
 import Greeting from "./routes/Greeting";
 import Loading from "./routes/Loading";
 import { AnimatePresence } from "framer-motion";
@@ -10,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <AnimatePresence exitBeforeEnter>
+        <div className="cursor"></div>
         <Routes>
           <Route path="/" element={<Loading />} />
           <Route path="/greeting" element={<Greeting />} />

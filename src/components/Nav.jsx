@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./style/nav.css";
 import { FcFolder } from "react-icons/fc";
-import { IoIosSearch } from "react-icons/io";
-import { FcGoogle } from "react-icons/fc";
+import { FcMusic } from "react-icons/fc";
 import { FcDocument } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { BsFillTerminalFill } from "react-icons/bs";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import Logo from "../assets/logo.png";
@@ -14,27 +14,31 @@ import Music from "./Music";
 import Terminal from "./Terminal";
 import Document from "./Document";
 
-const Nav = () => {
-  const [folder, setFo] = useState(false);
-  const [music, setMu] = useState(false);
-  const [document, setDo] = useState(false);
-  const [terminal, setTe] = useState(false);
-
-  const onClickF = () => {
-    setFo(!folder);
-    console.log("fo");
-  };
-  const onClickM = () => {
-    setMu(!music);
-    console.log("mu");
-  };
-  const onClickD = () => {
-    setDo(!document);
-    console.log("do");
-  };
-  const onClickT = () => {
-    setTe(!terminal);
-    console.log("te");
+const Nav = ({
+  folder,
+  music,
+  document,
+  terminal,
+  setFo,
+  setMu,
+  setDo,
+  setTe,
+}) => {
+  const onClick = (e) => {
+    switch (e.target.id) {
+      case "fol":
+        setFo(!folder);
+        break;
+      case "mus":
+        setMu(!music);
+        break;
+      case "doc":
+        setDo(!document);
+        break;
+      default:
+        setTe(!terminal);
+        break;
+    }
   };
 
   return (
@@ -47,11 +51,11 @@ const Nav = () => {
         </li>
       </ul>
       <ul className="nav-line">
-        <li onClick={onClickF}>
+        <li id="fol" onClick={onClick}>
           <FcFolder size={36} />
         </li>
-        <li onClick={onClickM}>
-          <IoIosSearch size={36} style={{ color: "white" }} />
+        <li id="mus" onClick={onClick}>
+          <FcMusic size={36} />
         </li>
         <li>
           <a
@@ -61,10 +65,10 @@ const Nav = () => {
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
-        <li onClick={onClickD}>
+        <li id="doc" onClick={onClick}>
           <FcDocument size={36} />
         </li>
-        <li onClick={onClickT}>
+        <li id="ter" onClick={onClick}>
           <BsFillTerminalFill size={30} style={{ color: "white" }} />
         </li>
       </ul>
@@ -88,10 +92,10 @@ const Nav = () => {
           <RiFullscreenFill size={30} />
         </li>
       </ul>
-      <Folder />
-      <Music />
-      <Terminal />
-      <Document />
+      {folder ? <Folder /> : null}
+      {music ? <Music /> : null}
+      {document ? <Document /> : null}
+      {terminal ? <Terminal /> : null}
     </nav>
   );
 };

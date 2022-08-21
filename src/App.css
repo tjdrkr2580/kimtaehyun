@@ -9,4 +9,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+svg {
+  pointer-events: none;
 }/*# sourceMappingURL=app.css.map */

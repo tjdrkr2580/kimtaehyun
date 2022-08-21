@@ -1,7 +1,7 @@
 import React from "react";
 
 const Folder = ({ folder }) => {
-  return <></>;
+  return <>안녕</>;
 };
 
 export default Folder;

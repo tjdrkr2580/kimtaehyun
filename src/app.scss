@@ -7,3 +7,7 @@
   overflow: hidden;
   user-select: none;
 }
+
+svg {
+  pointer-events: none;
+}

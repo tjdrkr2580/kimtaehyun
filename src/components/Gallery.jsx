@@ -1,4 +1,5 @@
 import React from "react";
+import Draggable from "react-draggable";
 import Cstar from "../assets/canvas-star.gif";
 import Star from "../assets/star.gif";
 import Block from "../assets/block.gif";
@@ -17,85 +18,88 @@ import "./style/gallery.css";
 
 const Gallery = ({ setGa, gallery }) => {
   return (
-    <section className="gallery-wrapper">
-      <ul className="gallery-line">
-        <li
-          onClick={() => {
-            setGa(!gallery);
-          }}
-          style={{ color: "#63cb4e" }}
-        >
-          ●
-        </li>
-        <li style={{ color: "#f4c04e" }}>●</li>
-        <li
-          onClick={() => {
-            setGa(!gallery);
-          }}
-          style={{ color: "#ec6a5f " }}
-        >
-          ●
-        </li>
-      </ul>
-      <section className="gallery-images">
-        <div className="gallery-image">
-          <img src={Cstar} alt="img1" />
-          <p>Canvas Cursor Stars</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Star} alt="img2" />
-          <p>Stars</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Block} alt="img3" />
-          <p>Hover Blocks</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Bottle} alt="img4" />
-          <p>Bottle</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Spin} alt="img5" />
-          <p>Spin Text</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Car} alt="img6" />
-          <p>Drive a Car</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Card} alt="img7" />
-          <p>Hover Card</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Clock} alt="img8" />
-          <p>Clock</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Finger} alt="img9" />
-          <p>Finger Print</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Loading} alt="img10" />
-          <p>Loading</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Menu} alt="img11" />
-          <p>Menu</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Mouse} alt="img12" />
-          <p>Mouse</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Scroll} alt="img13" />
-          <p>Scroll Text</p>
-        </div>
-        <div className="gallery-image">
-          <img src={Ball} alt="img14" />
-          <p>Ball</p>
-        </div>
+    <Draggable positionOffset={{ x: "-50%", y: "-50%" }}>
+      <section className="gallery-wrapper">
+        <ul className="gallery-line">
+          <li>갤러리</li>
+          <li>
+            <ul className="gallery-btn">
+              <li
+                onClick={() => {
+                  setGa(!gallery);
+                }}
+                style={{ color: "#63cb4e" }}
+              >
+                ●
+              </li>
+              <li style={{ color: "#f4c04e" }}>●</li>
+              <li
+                onClick={() => {
+                  setGa(!gallery);
+                }}
+                style={{ color: "#ec6a5f " }}
+              >
+                ●
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul className="gallery-images">
+          <li className="gallery-image">
+            <img src={Star} alt="img2" />
+            <p>Stars</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Block} alt="img3" />
+            <p>Hover Blocks</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Bottle} alt="img4" />
+            <p>Bottle</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Spin} alt="img5" />
+            <p>Spin Text</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Car} alt="img6" />
+            <p>Drive a Car</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Card} alt="img7" />
+            <p>Hover Card</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Clock} alt="img8" />
+            <p>Clock</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Finger} alt="img9" />
+            <p>Finger Print</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Loading} alt="img10" />
+            <p>Loading</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Menu} alt="img11" />
+            <p>Menu</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Mouse} alt="img12" />
+            <p>Mouse</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Scroll} alt="img13" />
+            <p>Scroll Text</p>
+          </li>
+          <li className="gallery-image">
+            <img src={Ball} alt="img14" />
+            <p>Ball</p>
+          </li>
+        </ul>
       </section>
-    </section>
+    </Draggable>
   );
 };
 

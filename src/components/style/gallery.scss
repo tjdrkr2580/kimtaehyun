@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap");
 
 .gallery-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: 1000;
   overflow: scroll;
   border-radius: 20px 20px 0 0;
   width: 65vw;
   height: 55vh;
+  top: 50%;
   left: 50%;
-  position: absolute;
   background-color: #252226;
-  transform: translate(-50%, -50%);
   animation: gallery 1s ease-in-out forwards;
 
   &::-webkit-scrollbar {
@@ -17,8 +19,12 @@
   }
 
   .gallery-line {
+    cursor: move;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 100;
     position: fixed;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     gap: 0.5rem;
     display: flex;
     top: 0%;
@@ -28,24 +34,32 @@
     height: 30px;
     background-color: #3a373a;
     li {
-      font-size: 1.3rem;
-      &:last-child {
-        margin-right: 1.5rem;
-      }
-      &:hover {
-        filter: brightness(75%);
+      color: white;
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      .gallery-btn {
+        margin-right: 1rem;
+        display: flex;
+        li {
+          cursor: pointer;
+          &:hover {
+            filter: brightness(75%);
+          }
+        }
       }
     }
   }
 
   .gallery-images {
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap: 1rem;
     margin-top: 3rem;
     .gallery-image {
+      justify-content: center;
       width: 100%;
       height: 100%;
       cursor: pointer;
@@ -60,7 +74,7 @@
         background-color: rgba($color: #000000, $alpha: 0.4);
       }
       img {
-        object-fit: contain;
+        object-fit: cover;
         width: 5vw;
         height: 5vw;
       }
@@ -68,7 +82,7 @@
         margin-top: 0.5rem;
         color: white;
         font-weight: 100;
-        font-size: 0.9vw;
+        font-size: 0.7vw;
       }
     }
   }
@@ -77,10 +91,8 @@
 @keyframes gallery {
   from {
     opacity: 0;
-    top: 60%;
   }
   to {
     opacity: 1;
-    top: 50%;
   }
 }

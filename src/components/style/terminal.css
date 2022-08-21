@@ -1,1 +1,73 @@
-/*# sourceMappingURL=terminal.css.map */
+.terminal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  overflow: scroll;
+  border-radius: 20px 20px 0 0;
+  width: 65vw;
+  height: 55vh;
+  top: 50%;
+  left: 50%;
+  background-color: #000000;
+  -webkit-animation: gallery 1s ease-in-out forwards;
+          animation: gallery 1s ease-in-out forwards;
+}
+.terminal-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.terminal-wrapper .terminal-line {
+  cursor: move;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 30px;
+  background-color: #3a373a;
+}
+.terminal-wrapper .terminal-line li {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+.terminal-wrapper .terminal-line li .terminal-btn {
+  margin-right: 1rem;
+  display: flex;
+}
+.terminal-wrapper .terminal-line li .terminal-btn li {
+  cursor: pointer;
+}
+.terminal-wrapper .terminal-line li .terminal-btn li:hover {
+  filter: brightness(75%);
+}
+.terminal-wrapper .terminal-type {
+  white-space: pre-line;
+  margin-top: 3rem;
+  margin-left: 0.5rem;
+  color: white;
+}
+.terminal-wrapper .terminal-type p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.terminal-wrapper .terminal-type .type-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.terminal-wrapper .terminal-type .type-wrapper input {
+  font-weight: 100;
+  color: white;
+  width: 200px;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}/*# sourceMappingURL=terminal.css.map */

@@ -20,7 +20,7 @@ const Home = () => {
         <Nav
           gallery={gallery}
           music={music}
-          document={doc}
+          doc={doc}
           terminal={terminal}
           setGa={setGa}
           setMu={setMu}
@@ -30,7 +30,16 @@ const Home = () => {
         {gallery ? <Gallery setGa={setGa} gallery={gallery} /> : null}
         {music ? <Music setMu={setMu} music={music} /> : null}
         {doc ? <Document /> : null}
-        {terminal ? <Terminal /> : null}
+        {terminal ? (
+          <Terminal
+            setTe={setTe}
+            terminal={terminal}
+            gallery={gallery}
+            music={music}
+            setGa={setGa}
+            setMu={setMu}
+          />
+        ) : null}
       </section>
     </AnimatedRoutes>
   );

@@ -21,6 +21,7 @@
     }
 
     .loading-bar {
+      border: 1px solid white;
       animation-delay: 2s;
       animation: 0.5s opacity ease-in-out;
       animation-fill-mode: forwards;

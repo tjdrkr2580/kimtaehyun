@@ -10,7 +10,7 @@ import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { RiFullscreenFill } from "react-icons/ri";
 
-const Nav = ({ gallery, music, doc, terminal, setGa, setMu, setDo, setTe }) => {
+const Nav = ({ gallery, music, terminal, setGa, setMu, setTe }) => {
   const onClick = (e) => {
     switch (e.target.id) {
       case "gal":
@@ -18,9 +18,6 @@ const Nav = ({ gallery, music, doc, terminal, setGa, setMu, setDo, setTe }) => {
         break;
       case "mus":
         setMu(!music);
-        break;
-      case "doc":
-        setDo(!doc);
         break;
       default:
         setTe(!terminal);
@@ -52,9 +49,14 @@ const Nav = ({ gallery, music, doc, terminal, setGa, setMu, setDo, setTe }) => {
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
-        <li id="doc" onClick={onClick}>
-          <FcDocument size={36} />
-        </li>
+        <a
+          href="https://tjdrkr2580.notion.site/Kim-Tae-Hyun-4ce30c75290f450da94a7ac7590e8c78"
+          target="_blink"
+        >
+          <li>
+            <FcDocument size={36} />
+          </li>
+        </a>
         <li id="ter" onClick={onClick}>
           <BsFillTerminalFill size={30} style={{ color: "white" }} />
         </li>

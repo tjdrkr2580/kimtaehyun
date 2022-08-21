@@ -6,12 +6,10 @@ import { Helmet } from "react-helmet";
 import Gallery from "./../components/Gallery";
 import Music from "./../components/Music";
 import Terminal from "./../components/Terminal";
-import Document from "./../components/Document";
 
 const Home = () => {
   const [gallery, setGa] = useState(false);
   const [music, setMu] = useState(false);
-  const [doc, setDo] = useState(false);
   const [terminal, setTe] = useState(false);
   return (
     <AnimatedRoutes>
@@ -20,16 +18,13 @@ const Home = () => {
         <Nav
           gallery={gallery}
           music={music}
-          doc={doc}
           terminal={terminal}
           setGa={setGa}
           setMu={setMu}
-          setDo={setDo}
           setTe={setTe}
         />
         {gallery ? <Gallery setGa={setGa} gallery={gallery} /> : null}
         {music ? <Music setMu={setMu} music={music} /> : null}
-        {doc ? <Document /> : null}
         {terminal ? (
           <Terminal
             setTe={setTe}

@@ -22,6 +22,7 @@
           animation-fill-mode: forwards;
 }
 .loading-wrapper .loading-box .loading-bar {
+  border: 1px solid white;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation: 0.5s opacity ease-in-out;

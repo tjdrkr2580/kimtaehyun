@@ -83,6 +83,7 @@ const Terminal = ({ terminal, setTe, gallery, music, setGa, setMu }) => {
                         setMu(!music);
                         break;
                       default:
+                        setType("");
                         newOutput +=
                           'Failed (remote: unknown commant) please type "help" command';
                         break;

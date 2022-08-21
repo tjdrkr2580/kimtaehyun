@@ -28,7 +28,7 @@ const Home = () => {
           setTe={setTe}
         />
         {gallery ? <Gallery setGa={setGa} gallery={gallery} /> : null}
-        {music ? <Music /> : null}
+        {music ? <Music setMu={setMu} music={music} /> : null}
         {doc ? <Document /> : null}
         {terminal ? <Terminal /> : null}
       </section>

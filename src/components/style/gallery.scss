@@ -19,7 +19,6 @@
     width: 100%;
     height: 30px;
     background-color: #3a373a;
-    position: absolute;
     li {
       font-size: 1.3rem;
       &:nth-child(3) {
@@ -29,5 +28,8 @@
         filter: brightness(75%);
       }
     }
+  }
+  .gallery-images {
+    display: grid;
   }
 }

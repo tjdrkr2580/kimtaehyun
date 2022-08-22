@@ -43,20 +43,22 @@ const Nav = ({ gallery, music, terminal, setGa, setMu, setTe }) => {
         </li>
         <li>
           <a
+            className="nav-link"
             href="https://www.google.co.kr/search?q=%EC%9D%B8%EC%B2%9C%EC%A0%84%EC%9E%90%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90"
             target="_blink"
           >
             <FcGoogle size={36} style={{ color: "white" }} />
           </a>
         </li>
-        <a
-          href="https://tjdrkr2580.notion.site/Kim-Tae-Hyun-4ce30c75290f450da94a7ac7590e8c78"
-          target="_blink"
-        >
-          <li>
+        <li>
+          <a
+            className="nav-link"
+            href="https://tjdrkr2580.notion.site/Kim-Tae-Hyun-4ce30c75290f450da94a7ac7590e8c78"
+            target="_blink"
+          >
             <FcDocument size={36} />
-          </li>
-        </a>
+          </a>
+        </li>
         <li id="ter" onClick={onClick}>
           <BsFillTerminalFill size={30} style={{ color: "white" }} />
         </li>

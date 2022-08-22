@@ -22,10 +22,10 @@
     width: auto;
     padding-right: 1rem;
     li {
-      transition: 0.4s transform;
+      transition: 0.5s ease-in-out transform;
       cursor: pointer;
       &:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
       }
     }
     img {
@@ -42,15 +42,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 100%;
     width: auto;
     li {
+      width: 50%;
       z-index: 999;
       color: white;
       transition: 0.4s transform;
       cursor: pointer;
-      &:hover {
-        transform: scale(1.3);
+      a {
+        width: 100%;
+        height: 100%;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-wrapper {
+    width: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-wrapper {
+    width: auto;
+    .nav-line {
+      li {
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+      img {
+        width: 100%;
+        height: 60px;
       }
     }
   }

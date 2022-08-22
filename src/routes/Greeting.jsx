@@ -55,7 +55,9 @@ const Greeting = () => {
               </a>
             </li>
             <li>
-              <FiPower size={36} />
+              <Link to="/">
+                <FiPower size={36} />
+              </Link>
             </li>
           </ul>
         </div>

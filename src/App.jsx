@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <AnimatePresence exitBeforeEnter>
-        <div className="cursor"></div>
         <Routes>
           <Route path="/" element={<Loading />} />
           <Route path="/greeting" element={<Greeting />} />

@@ -45,58 +45,99 @@ const Gallery = ({ setGa, gallery }) => {
           </li>
         </ul>
         <ul className="gallery-images">
-          <li className="gallery-image">
-            <img src={Star} alt="img2" />
-            <p>Stars</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Block} alt="img3" />
-            <p>Hover Blocks</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Bottle} alt="img4" />
-            <p>Bottle</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Spin} alt="img5" />
-            <p>Spin Text</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Car} alt="img6" />
-            <p>Drive a Car</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Card} alt="img7" />
-            <p>Hover Card</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Clock} alt="img8" />
-            <p>Clock</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Finger} alt="img9" />
-            <p>Finger Print</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Loading} alt="img10" />
-            <p>Loading</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Menu} alt="img11" />
-            <p>Menu</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Mouse} alt="img12" />
-            <p>Mouse</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Scroll} alt="img13" />
-            <p>Scroll Text</p>
-          </li>
-          <li className="gallery-image">
-            <img src={Ball} alt="img14" />
-            <p>Ball</p>
-          </li>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
+              <img src={Star} alt="img2" />
+              <p>Stars</p>
+            </li>
+          </a>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
+              <img src={Block} alt="img3" />
+              <p>Hov. Block</p>
+            </li>
+          </a>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
+              <img src={Bottle} alt="img4" />
+              <p>Bottle</p>
+            </li>
+          </a>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
+              <img src={Spin} alt="img5" />
+              <p>Spin Text</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Car} alt="img6" />
+              <p>Drive a Car</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Card} alt="img7" />
+              <p>Hover Card</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Clock} alt="img8" />
+              <p>Clock</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Finger} alt="img9" />
+              <p>Finger Print</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Loading} alt="img10" />
+              <p>Loading</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Menu} alt="img11" />
+              <p>Menu</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Mouse} alt="img12" />
+              <p>Mouse</p>
+            </li>
+          </a>
+          <a href="https://github.com/tjdrkr2580/Practice" target="_blink">
+            <li className="gallery-image">
+              <img src={Scroll} alt="img13" />
+              <p>Scroll Text</p>
+            </li>
+          </a>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
+              <img src={Ball} alt="img14" />
+              <p>Ball</p>
+            </li>
+          </a>
         </ul>
       </section>
     </Draggable>

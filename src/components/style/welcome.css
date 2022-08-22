@@ -1,4 +1,54 @@
-.Welcome-wrapper {
+.welcome-wrapper {
+  -webkit-animation: welcome 1.2s ease-in-out forwards;
+          animation: welcome 1.2s ease-in-out forwards;
+  color: white;
+  position: absolute;
+  width: 500px;
+  height: 250px;
+  top: 10%;
+  right: 2%;
   display: flex;
-  background: #0d2139;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+.welcome-wrapper:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+.welcome-wrapper header {
+  pointer-events: none;
+  height: 50px;
+  margin: 2rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome-wrapper header div {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+.welcome-wrapper header div img {
+  width: 40px;
+  height: 40px;
+}
+.welcome-wrapper header div span {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+.welcome-wrapper header p {
+  pointer-events: none;
+  -webkit-animation: arrow 2s linear infinite;
+          animation: arrow 2s linear infinite;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.welcome-wrapper section {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  position: relative;
+  left: 5%;
 }/*# sourceMappingURL=welcome.css.map */

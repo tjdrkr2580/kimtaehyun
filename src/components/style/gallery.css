@@ -55,6 +55,7 @@
   justify-items: center;
   align-items: center;
   gap: 1rem;
+  padding: 0 1rem 0 1rem;
   margin-top: 3rem;
 }
 .gallery-wrapper .gallery-images .gallery-image {

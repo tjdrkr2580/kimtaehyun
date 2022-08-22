@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import Gallery from "./../components/Gallery";
 import Music from "./../components/Music";
 import Terminal from "./../components/Terminal";
+import Welcome from "../components/Welcome";
 
 const Home = () => {
   const [gallery, setGa] = useState(false);
@@ -15,6 +16,7 @@ const Home = () => {
     <AnimatedRoutes>
       <Helmet title="TaeH | Home" />
       <section className="home-wrapper">
+        <Welcome />
         <Nav
           gallery={gallery}
           music={music}

@@ -1,7 +1,7 @@
 .loading-wrapper {
   width: 100vw;
   height: 100vw;
-  background-color: black;
+  background-color: rgb(4, 2, 39);
 }
 .loading-wrapper .loading-box {
   top: 50%;
@@ -22,7 +22,7 @@
           animation-fill-mode: forwards;
 }
 .loading-wrapper .loading-box .loading-bar {
-  border: 1px solid white;
+  background: #fff;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation: 0.5s opacity ease-in-out;

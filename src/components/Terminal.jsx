@@ -1,4 +1,3 @@
-import { logDOM } from "@testing-library/react";
 import React, { useState, useRef } from "react";
 import Draggable from "react-draggable";
 import "./style/terminal.css";

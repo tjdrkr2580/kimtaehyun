@@ -50,6 +50,15 @@ const Gallery = ({ setGa, gallery }) => {
             target="_blink"
           >
             <li className="gallery-image">
+              <img src={Cstar} alt="img1" />
+              <p>Canvas Stars</p>
+            </li>
+          </a>
+          <a
+            href="https://github.com/tjdrkr2580/CSS-Animations"
+            target="_blink"
+          >
+            <li className="gallery-image">
               <img src={Star} alt="img2" />
               <p>Stars</p>
             </li>
